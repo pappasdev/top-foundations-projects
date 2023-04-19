@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono&family=Rubik&display=swap');
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Rubik', sans-serif;
+    min-height: 100vh;
+    margin: 0px;
+}
+ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 5px;
+}
+ul a {
+    text-decoration: none;
+    color: hsl(218, 21%, 90%);
+}
+img {
+    width: 400px;
+}
+button {
+    background-color: hsl(218, 99%, 60%);
+    border-radius: .5em;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-weight: 800;
+    color: hsl(218, 99%, 100%);
+}
+.first-button {
+    border-width: 0px;
+}
+.block-one {
+    background-color: hsl(218, 21%, 30%);
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 50px;
+}
+.nav {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    color: hsl(218, 21%, 100%);
+    padding-bottom: 70px;
+}
+.awesome-image {
+    display: flex;
+    justify-content: space-between;
+    align-items:start;
+    color: hsl(218, 21%, 100%);
+}
+.left-side {
+    padding-right: 40px;
+    margin-top: -20px;
+}
+.block-two {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+}
+.squares {
+    justify-content: center;
+    display: flex;
+    width: 150px;
+    text-align: center;
+}
+.square {
+    width: 150px;
+    height: 150px;
+    border: 2px hsl(218, 99%, 60%) solid;
+    border-radius: 0.5em;
+    margin: 20px;
+}
+.block-three {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: hsl(216, 45%, 86%);
+}
+.quote {
+    flex: 0 0 auto;
+    font-size: 2em;
+    font-style: italic;
+}
+.person {
+    flex: 0 0 auto;
+    font-size: 1.2em;
+    margin-top: -20px;
+    margin-right: -430px;
+}
+.block-four {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: hsl(218, 99%, 60%);
+    color: aliceblue;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 100px;
+    margin-right: 100px;
+    padding: 30px;
+    border-radius: 0.5em;
+
+}
+.second-button {
+    border: 1px aliceblue solid;
+}
+footer {
+    margin-top: auto;
+    background-color: hsl(218, 21%, 30%);
+    padding: 0px;
+    color: aliceblue;
+    text-align: center;
+}
