@@ -1,14 +1,44 @@
-@import url("https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap");
-
 html {
     background-color: rgb(41, 41, 41);
-    color: rgb(104, 207, 99);
-    font-family: "Fira Mono", monospace;
+    color: rgb(117, 233, 109);
+    font-family: 'Josefin Sans', sans-serif;
 }
 body {
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
-    max-width: 80ch;
-    padding: 1rem;
-    line-height: 1.5;
 }
+ul {
+    list-style-type:none;
+}
+a {
+    color: rgb(253 184 93);
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+}
+a:hover {
+    animation: color-fade 2s infinite alternate;
+}
+@keyframes color-fade {
+    0% {
+      color: rgb(253 184 93);
+    }
+    50% {
+      color: rgb(255, 225, 186);
+    }
+    100% {
+      color: rgb(253 184 93);
+    }
+  }
+  h1 {
+    font-size: 4em;
+    border-bottom: 1px solid;
+    margin-bottom: 0px;
+  }
+  p {
+    font-size: 20px;
+    margin-bottom: 5px;
+    margin-top: 0px;
+  }
