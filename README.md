@@ -1,3 +1,2 @@
 # top-foundations-projects
-#### yes i know...
-it's yet another boring portfolio of small js projects that have been done to death. however, for me, they help. enjoy perusing if that's your thing.
+## [TOP Projects](https://selfdivision.github.io/top-foundations-projects/)
