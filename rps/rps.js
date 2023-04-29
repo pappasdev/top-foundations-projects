@@ -59,9 +59,7 @@ let playRound = (player, computer) => {
 
 //?when a player or players reach 5 points, return results
 let result = () => {
-    if (human === 5 && cpu === 5) {
-        return `The final result is a tie`;
-    } else if (human === 5) {
+    if (human === 5) {
         document.getElementById('rock').disabled = true;
         document.getElementById('paper').disabled = true;
         document.getElementById('scissors').disabled = true;
