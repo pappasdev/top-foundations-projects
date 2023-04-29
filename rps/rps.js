@@ -60,14 +60,14 @@ let playRound = (player, computer) => {
 //?when a player or players reach 5 points, return results
 let result = () => {
     if (human === 5) {
-        document.getElementById('rock').disabled = true;
-        document.getElementById('paper').disabled = true;
-        document.getElementById('scissors').disabled = true;
+        document.getElementById("rock").disabled = true;
+        document.getElementById("paper").disabled = true;
+        document.getElementById("scissors").disabled = true;
         return `Player wins the best of five!`;
     } else if (cpu === 5) {
-        document.getElementById('rock').disabled = true;
-        document.getElementById('paper').disabled = true;
-        document.getElementById('scissors').disabled = true;
+        document.getElementById("rock").disabled = true;
+        document.getElementById("paper").disabled = true;
+        document.getElementById("scissors").disabled = true;
         return `Computer wins the best of five!`;
     }
 };
@@ -98,9 +98,10 @@ announcer.appendChild(points);
 announcer.appendChild(finalResult);
 
 //? default text values to prevent popping in
-reset.textContent = 'Reset';
-points.textContent = 'Player: 0 | Computer: 0';
-roundResult.textContent = 'Click on Rock, Paper, or Scissors to start the game!'
+reset.textContent = "Reset";
+points.textContent = "Player: 0 | Computer: 0";
+roundResult.textContent =
+    "Click on Rock, Paper, or Scissors to start the game!";
 
 /* EVENT LISTENERS
 ? set event listeners to click to a function that runs the game and results functions
@@ -109,24 +110,24 @@ roundResult.textContent = 'Click on Rock, Paper, or Scissors to start the game!'
 
 rock.addEventListener("click", function () {
     roundResult.textContent = playRound("rock", getComputerChoice());
-    points.textContent = `Player: ${human} | Computer: ${cpu}`
+    points.textContent = `Player: ${human} | Computer: ${cpu}`;
     finalResult.textContent = result();
 });
 paper.addEventListener("click", function () {
     roundResult.textContent = playRound("paper", getComputerChoice());
-    points.textContent = `Player: ${human} | Computer: ${cpu}`
+    points.textContent = `Player: ${human} | Computer: ${cpu}`;
     finalResult.textContent = result();
 });
 scissors.addEventListener("click", function () {
     roundResult.textContent = playRound("scissors", getComputerChoice());
-    points.textContent = `Player: ${human} | Computer: ${cpu}`
+    points.textContent = `Player: ${human} | Computer: ${cpu}`;
     finalResult.textContent = result();
 });
-reset.addEventListener('click', function () {
+reset.addEventListener("click", function () {
     human = 0;
     cpu = 0;
-    points.textContent = `Player: ${human} | Computer: ${cpu}`
-    document.getElementById('rock').disabled = false;
-    document.getElementById('paper').disabled = false;
-    document.getElementById('scissors').disabled = false;
-})
+    points.textContent = `Player: ${human} | Computer: ${cpu}`;
+    document.getElementById("rock").disabled = false;
+    document.getElementById("paper").disabled = false;
+    document.getElementById("scissors").disabled = false;
+});
