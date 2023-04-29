@@ -1,7 +1,7 @@
 html,
 button {
     font-family: "Kanit", monospace;
-    font-size: 20px;
+    font-size: 1.2em;
 }
 body {
     background-color: #2a2c34;
@@ -13,7 +13,7 @@ button {
     border: 1px solid #495077;
     box-shadow: 2px 2px 2px #323952;
     border-radius: 0.2em;
-    font-size: large;
+    font-size: 1em;
     margin: 5px;
     padding: 5px 10px;
 }
@@ -23,6 +23,9 @@ button:disabled {
     border: 1px rgb(122, 17, 17) solid;
     box-shadow: 2px 2px 2px #4c0808;
 
+}
+a {
+    animation: fire 4s linear infinite;
 }
 .points {
     animation: fire 4s linear infinite;
@@ -38,11 +41,12 @@ button:disabled {
     display: flex;
     flex-wrap: wrap;
     margin-top: 5%;
-    margin-bottom: 2%;
+    margin-bottom: 5px;
 }
 .announcer {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     text-align: center;
     min-height: 200px;
@@ -54,8 +58,12 @@ button:disabled {
 }
 .endResult {
     text-align: center;
-    font-size: 48px;
+    font-size: 2.5em;
     animation: fire 4s linear infinite;
+}
+footer{
+    text-align: right;
+    font-size: 0.8em;
 }
 @keyframes fire {
     0% {

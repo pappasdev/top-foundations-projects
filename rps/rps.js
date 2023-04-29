@@ -25,7 +25,7 @@ var cpu = 0;
 let playRound = (player, computer) => {
     if (player === "rock") {
         if (computer === "rock") {
-            return "It's a tie!";
+            return "Nothing happens... because it's a tie. Try again!";
         } else if (computer === "scissors") {
             human++;
             return "The player's rock crushes the computer's scissors!";
@@ -36,7 +36,7 @@ let playRound = (player, computer) => {
     }
     if (player === "scissors") {
         if (computer === "scissors") {
-            return "It's a tie!";
+            return "Nothing happens... because it's a tie. Try again!";
         } else if (computer === "rock") {
             cpu++;
             return "The computer's rock crushes the player's scissors!";
@@ -47,7 +47,7 @@ let playRound = (player, computer) => {
     }
     if (player === "paper") {
         if (computer === "paper") {
-            return "It's a tie!\r\n";
+            return "Nothing happens... because it's a tie. Try again!";
         } else if (computer === "rock") {
             human++;
             return "The player's paper wraps the computer's rock and self-destructs!\r\n";
@@ -104,6 +104,7 @@ const points = document.createElement("p");
 const reset = document.createElement("button");
 const buttons = document.querySelector(".buttons");
 const game = document.querySelector(".game");
+const footer = document.querySelector("footer");
 
 //? class assigning
 announcer.classList.toggle("announcer");
@@ -117,6 +118,7 @@ buttons.appendChild(reset);
 game.appendChild(announcer);
 announcer.appendChild(points);
 announcer.appendChild(roundResult);
+game.appendChild(footer);
 game.appendChild(finalResult);
 
 /* EVENT LISTENERS
