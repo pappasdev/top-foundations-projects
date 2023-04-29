@@ -67,9 +67,9 @@ let result = () => {
         document.getElementById("reset").disabled = false;
     }
     if (human === 5) {
-        return `Player wins`;
+        return `Player wins!`;
     } else if (cpu === 5) {
-        return `Computer wins`;
+        return `Computer wins!`;
     }
 };
 
@@ -113,10 +113,10 @@ points.classList.toggle("points");
 reset.id = "reset";
 
 //? announcer box that shows round results and final results after five rounds
+game.appendChild(finalResult);
 buttons.appendChild(reset);
 game.appendChild(announcer);
 announcer.appendChild(points);
-announcer.appendChild(finalResult);
 announcer.appendChild(roundResult);
 
 /* EVENT LISTENERS
