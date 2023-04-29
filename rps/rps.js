@@ -47,13 +47,13 @@ let playRound = (player, computer) => {
     }
     if (player === "paper") {
         if (computer === "paper") {
-            return "It's a tie!";
+            return "It's a tie!\r\n";
         } else if (computer === "rock") {
             human++;
-            return "The player's paper wraps the computer's rock and self-destructs!";
+            return "The player's paper wraps the computer's rock and self-destructs!\r\n";
         } else if (computer === "scissors") {
             cpu++;
-            return "The computer's scissors cuts the player's paper into shreds!";
+            return "The computer's scissors cuts the player's paper into shreds!\r\n";
         }
     }
 };
@@ -77,8 +77,7 @@ let result = () => {
 let resetGame = () => {
     human = 0;
     cpu = 0;
-    roundResult.textContent =
-        "Click on Rock, Paper, or Scissors to start the game!";
+    roundResult.textContent = "";
     points.textContent = `Player: ${human} | Computer: ${cpu}`;
     finalResult.textContent = "";
     document.getElementById("rock").disabled = false;
@@ -112,27 +111,27 @@ points.classList.toggle("points");
 reset.id = "reset";
 
 //? announcer box that shows round results and final results after five rounds
-body.appendChild(announcer);
 body.appendChild(reset);
-announcer.appendChild(roundResult);
+body.appendChild(announcer);
 announcer.appendChild(points);
+announcer.appendChild(roundResult);
 announcer.appendChild(finalResult);
 
 /* EVENT LISTENERS
 ? set event listeners to click to a function that runs the game and results functions
-? event listeners return each result to a string that is wrapped in <p> that is attached to a div to show a running list of results  
+? event listeners return each result to a string that is wrapped in <p> that is attached to a div to show a running list of results 
 */
 
 rock.addEventListener("click", function () {
-    roundResult.textContent = playRound("rock", getComputerChoice());
+    roundResult.innerHTML += playRound("rock", getComputerChoice()) + "<br>";
     scoreTracker();
 });
 paper.addEventListener("click", function () {
-    roundResult.textContent = playRound("paper", getComputerChoice());
+    roundResult.innerHTML += playRound("paper", getComputerChoice()) + "<br>";
     scoreTracker();
 });
 scissors.addEventListener("click", function () {
-    roundResult.textContent = playRound("scissors", getComputerChoice());
+    roundResult.innerHTML += playRound("scissors", getComputerChoice()) + "<br>";
     scoreTracker();
 });
 reset.addEventListener("click", resetGame);
@@ -142,6 +141,4 @@ window.onload = function () {
     document.getElementById("reset").disabled = true;
     reset.textContent = "Reset";
     points.textContent = "Player: 0 | Computer: 0";
-    roundResult.textContent =
-        "Click on Rock, Paper, or Scissors to start the game!";
 };
