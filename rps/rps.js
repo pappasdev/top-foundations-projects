@@ -1,5 +1,7 @@
-//? computer player logic based on using random number up to 3 starting with 1
-//? random number tied to string choices
+/*
+? computer player logic based on using random number up to 3 starting with 1
+? random number tied to string choices 
+*/
 let getComputerChoice = () => {
     let choice = Math.floor(Math.random() * 3) + 1;
     if (choice === 1) {
@@ -14,19 +16,21 @@ let getComputerChoice = () => {
 var human = 0;
 var cpu = 0;
 
-//? player parameter === button click set to appropriate string input
-//? computer parameter === getComputerChoice function
+/* 
+? game logic w/ point tallying
+? player parameter === button click set to appropriate string input
+? computer parameter === getComputerChoice() 
+*/
 let playRound = (player, computer) => {
-    //?game logic w/ point tallying
     if (player === "rock") {
         if (computer === "rock") {
             return "It's a tie!";
         } else if (computer === "scissors") {
             human++;
-            return "Player wins! Rock crushes scissors!";
+            return "The player's rock crushes the computer's scissors!";
         } else if (computer === "paper") {
             cpu++;
-            return "Computer wins! Paper suffocates rock!";
+            return "The computers's paper wraps the player's rock and self-destructs!";
         }
     }
     if (player === "scissors") {
@@ -34,98 +38,97 @@ let playRound = (player, computer) => {
             return "It's a tie!";
         } else if (computer === "rock") {
             cpu++;
-            return "Computer wins! Rock crushes scissors!";
+            return "The computer's rock crushes the player's scissors!";
         } else if (computer === "paper") {
             human++;
-            return "Player Wins! Scissors cuts paper!";
+            return "The player's scissors cuts the computer's paper into shreds!";
         }
     }
     if (player === "paper") {
         if (computer === "paper") {
-            return "It's a tie";
+            return "It's a tie!";
         } else if (computer === "rock") {
             human++;
-            return "Player wins! Paper suffocates rock!";
+            return "The player's paper wraps the computer's rock and self-destructs!";
         } else if (computer === "scissors") {
             cpu++;
-            return "Computer wins! Scissors cuts paper!";
+            return "Computer's scissors cuts the player's paper into shreds!";
         }
     }
 };
 
+//?when a player or players reach 5 points, return results
 let result = () => {
-    //?when a player or players reach 5 points, return results
-    if (human === 5 && cpu < 5) {
-        alert(
-            `Player wins with a score of ${human}!\nFinal score: Player: ${human} | Computer: ${cpu}.`
-        );
-    } else if (human === 5 && cpu === 5) {
-        alert(`It's a tie!\nFinal score: Player: ${human} | Computer: ${cpu}.`);
-    } else if (human < 5 && cpu === 5) {
-        alert(
-            `Computer wins with a score of ${cpu}!\nFinal score: Computer: ${cpu} | Player: ${human}.`
-        );
+    if (human === 5 && cpu === 5) {
+        return `The final result is a tie`;
+    } else if (human === 5) {
+        document.getElementById('rock').disabled = true;
+        document.getElementById('paper').disabled = true;
+        document.getElementById('scissors').disabled = true;
+        return `Player wins the best of five!`;
+    } else if (cpu === 5) {
+        document.getElementById('rock').disabled = true;
+        document.getElementById('paper').disabled = true;
+        document.getElementById('scissors').disabled = true;
+        return `Computer wins the best of five!`;
     }
 };
 
-//? variables are set to the buttons' class in index.HTML
-
-const rock = document.querySelector(".rock");
-const paper = document.querySelector(".paper");
-const scissors = document.querySelector(".scissors");
+//? variables set to provide web functionality
 const body = document.querySelector("body");
-const announcer = document.createElement('div');
+const rock = document.querySelector("#rock");
+const paper = document.querySelector("#paper");
+const scissors = document.querySelector("#scissors");
+const announcer = document.createElement("div");
+const roundResult = document.createElement("p");
+const finalResult = document.createElement("p");
+const points = document.createElement("p");
+const reset = document.createElement("button");
 
 //? class assigning
-announcer.classList.toggle('announcer');
+announcer.classList.toggle("announcer");
+roundResult.classList.toggle("roundResult");
+finalResult.classList.toggle("endResult");
+points.classList.toggle("points");
+reset.classList.toggle("reset");
 
-//? announcer box to show round results and end results after five rounds
+//? announcer box that shows round results and final results after five rounds
+body.appendChild(announcer);
+body.appendChild(reset);
+announcer.appendChild(roundResult);
+announcer.appendChild(points);
+announcer.appendChild(finalResult);
 
+//? default text values to prevent popping in
+reset.textContent = 'Reset';
+points.textContent = 'Player: 0 | Computer: 0';
+roundResult.textContent = 'Click on Rock, Paper, or Scissors to start the game!'
 
 /* EVENT LISTENERS
-? set event listeners to click to run empty function that runs the game and results functions
-? event listeners return each result to a string that is wrapped in <p>, and attached to a div to show a running list of each return statement  
- */
+? set event listeners to click to a function that runs the game and results functions
+? event listeners return each result to a string that is wrapped in <p> that is attached to a div to show a running list of results  
+*/
 
 rock.addEventListener("click", function () {
-    console.log(playRound("rock", getComputerChoice()));
-    result();
+    roundResult.textContent = playRound("rock", getComputerChoice());
+    points.textContent = `Player: ${human} | Computer: ${cpu}`
+    finalResult.textContent = result();
 });
 paper.addEventListener("click", function () {
-    console.log(playRound("paper", getComputerChoice()));
-    result();
+    roundResult.textContent = playRound("paper", getComputerChoice());
+    points.textContent = `Player: ${human} | Computer: ${cpu}`
+    finalResult.textContent = result();
 });
 scissors.addEventListener("click", function () {
-    console.log(playRound("scissors", getComputerChoice()));
-    result();
+    roundResult.textContent = playRound("scissors", getComputerChoice());
+    points.textContent = `Player: ${human} | Computer: ${cpu}`
+    finalResult.textContent = result();
 });
-
-/*
-!DEPRECATED CODE FOR ALERT VERSION OF GAME
-let game = () => {
-    for (let i = 1; i <= 5; i++) {
-        let selection = prompt(
-            "What's your choice?",
-            "Pick one: rock, paper, or scissors."
-        );
-        if (["paper", "rock", "scissors"].includes(selection.toLowerCase())) {
-            let str = playRound(selection, getComputerChoice());
-            alert(str);
-        } else {
-            alert("Wrong input. Try again");
-        }
-    }
-    if (human > cpu) {
-        alert(
-            `Player wins with a score of ${human}!\nFinal score: Player: ${human} | Computer: ${cpu}.`
-        );
-    } else if (human === cpu) {
-        alert(`It's a tie!\nFinal score: Player: ${human} | Computer: ${cpu}.`);
-    } else {
-        alert(
-            `Computer wins with a score of ${cpu}!\nFinal score: Computer: ${cpu} | Player: ${human}.`
-        );
-    }
-};
-game();
-*/
+reset.addEventListener('click', function () {
+    human = 0;
+    cpu = 0;
+    points.textContent = `Player: ${human} | Computer: ${cpu}`
+    document.getElementById('rock').disabled = false;
+    document.getElementById('paper').disabled = false;
+    document.getElementById('scissors').disabled = false;
+})
