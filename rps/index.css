@@ -1,21 +1,45 @@
-html, button {
-    font-family: 'Rubik Mono One', sans-serif;
-    color:antiquewhite;
+html,
+button {
+    font-family: "Rubik Mono One", sans-serif;
+    color: antiquewhite;
 }
-body {
-    background-color: #212121;
+html, body {
+    background-color: #2a2c34;
+    margin:0;
 }
-button{
-    background-color: #05591c;
-    border: 1px antiquewhite solid;
+button {
+    background-color: #22242a;
+    border: 1px solid #484f74;
+    box-shadow: 0px 0px 6px #4a5484;
+    border-radius: 0.2em;
     font-size: larger;
+    margin: 5px;
+    padding: 5px;
 }
 button:disabled {
-    background-color: #a31515;
-    border: 1px black solid;
+    background-color: #550303;
+    border: 1px rgb(122, 17, 17) solid;
+    box-shadow: 0px 0px 8px #7f2b2b;
+    border-radius: 0.2em;
+    margin: 5px;
+    padding: 5px;
     font-size: larger;
 }
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    margin-top: 10%;
+}
 .announcer {
-   border: 1px black solid;
-   padding: 20px;
+    width: 50%;
+    margin: 0 auto;
+    background-color: #22242a;
+    border: 1px solid #484f74;
+    border-radius: 0.2em;
+    box-shadow: 4px 4px 10px #2f354c;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }

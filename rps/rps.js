@@ -78,7 +78,7 @@ let resetGame = () => {
     human = 0;
     cpu = 0;
     roundResult.textContent = "";
-    points.textContent = `Player: ${human} | Computer: ${cpu}`;
+    points.textContent = "Make a choice to start the game";
     finalResult.textContent = "";
     document.getElementById("rock").disabled = false;
     document.getElementById("paper").disabled = false;
@@ -102,6 +102,8 @@ const roundResult = document.createElement("p");
 const finalResult = document.createElement("p");
 const points = document.createElement("p");
 const reset = document.createElement("button");
+const buttons = document.querySelector(".buttons");
+const game = document.querySelector(".game");
 
 //? class assigning
 announcer.classList.toggle("announcer");
@@ -111,11 +113,11 @@ points.classList.toggle("points");
 reset.id = "reset";
 
 //? announcer box that shows round results and final results after five rounds
-body.appendChild(reset);
-body.appendChild(announcer);
+buttons.appendChild(reset);
+game.appendChild(announcer);
 announcer.appendChild(points);
-announcer.appendChild(roundResult);
 announcer.appendChild(finalResult);
+announcer.appendChild(roundResult);
 
 /* EVENT LISTENERS
 ? set event listeners to click to a function that runs the game and results functions
@@ -140,5 +142,5 @@ reset.addEventListener("click", resetGame);
 window.onload = function () {
     document.getElementById("reset").disabled = true;
     reset.textContent = "Reset";
-    points.textContent = "Player: 0 | Computer: 0";
+    points.textContent = "Make a choice to start the game";
 };
