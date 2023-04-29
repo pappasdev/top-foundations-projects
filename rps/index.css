@@ -2,59 +2,69 @@ html,
 button {
     font-family: "Kanit", monospace;
     font-size: 20px;
-    color: antiquewhite;
 }
 body {
     background-color: #2a2c34;
+    color: #c6cffa
 }
 button {
+    color: #c6cffa;
     background-color: #22242a;
-    border: 1px solid #484f74;
-    box-shadow: 0px 0px 6px #4a5484;
+    border: 1px solid #495077;
+    box-shadow: 2px 2px 2px #323952;
     border-radius: 0.2em;
-    font-size: larger;
+    font-size: large;
     margin: 5px;
-    padding: 5px;
+    padding: 5px 10px;
 }
 button:disabled {
+    color: #fa5353;
     background-color: #550303;
     border: 1px rgb(122, 17, 17) solid;
-    box-shadow: 0px 0px 8px #7f2b2b;
-    border-radius: 0.2em;
-    margin: 5px;
-    padding: 5px;
-    font-size: larger;
+    box-shadow: 2px 2px 2px #4c0808;
+
+}
+.points {
+    animation: fire 4s linear infinite;
+}
+.roundResult {
+  color:aliceblue;  
+}
+.container {
+    margin: 0 auto;
+    max-width: 700px;
 }
 .buttons {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
     margin-top: 5%;
+    margin-bottom: 2%;
 }
 .announcer {
-    width: 50%;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-height: 200px;
     background-color: #22242a;
     border: 1px solid #484f74;
     border-radius: 0.2em;
     box-shadow: 4px 4px 10px #2f354c;
-    padding-left: 25px;
-    padding-right: 25px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 10px;
 }
 .endResult {
     text-align: center;
     font-size: 48px;
-    animation: pulse 4s linear infinite;
+    animation: fire 4s linear infinite;
 }
-@keyframes pulse {
+@keyframes fire {
     0% {
-        color: violet;
+        color: #47b3f6;
     }
     50% {
-        color: #484f74;
+        color: #fb83e5;
     }
     100% {
-        color: violet;
+        color: #47b3f6;
     }
 }

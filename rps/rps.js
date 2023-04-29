@@ -88,7 +88,7 @@ let resetGame = () => {
 
 //? function keeps track of score and provides final result
 let scoreTracker = () => {
-    points.textContent = `Player: ${human} | Computer: ${cpu}`;
+    points.innerHTML = `Player: ${human}` + "<br>" + `Computer: ${cpu}`;
     finalResult.textContent = result();
 };
 
@@ -113,11 +113,11 @@ points.classList.toggle("points");
 reset.id = "reset";
 
 //? announcer box that shows round results and final results after five rounds
-game.appendChild(finalResult);
 buttons.appendChild(reset);
 game.appendChild(announcer);
 announcer.appendChild(points);
 announcer.appendChild(roundResult);
+game.appendChild(finalResult);
 
 /* EVENT LISTENERS
 ? set event listeners to click to a function that runs the game and results functions
@@ -125,15 +125,15 @@ announcer.appendChild(roundResult);
 */
 
 rock.addEventListener("click", function () {
-    roundResult.innerHTML += playRound("rock", getComputerChoice()) + "<br>";
+    roundResult.textContent = playRound("rock", getComputerChoice());
     scoreTracker();
 });
 paper.addEventListener("click", function () {
-    roundResult.innerHTML += playRound("paper", getComputerChoice()) + "<br>";
+    roundResult.textContent = playRound("paper", getComputerChoice());
     scoreTracker();
 });
 scissors.addEventListener("click", function () {
-    roundResult.innerHTML += playRound("scissors", getComputerChoice()) + "<br>";
+    roundResult.textContent = playRound("scissors", getComputerChoice());
     scoreTracker();
 });
 reset.addEventListener("click", resetGame);
