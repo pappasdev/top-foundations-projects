@@ -31,7 +31,7 @@ let playRound = (player, computer) => {
             return "The player's rock crushes the computer's scissors!";
         } else if (computer === "paper") {
             cpu++;
-            return "The computers's paper wraps the player's rock and self-destructs!";
+            return "The computer's paper wraps the player's rock and self-destructs!";
         }
     }
     if (player === "scissors") {
@@ -53,23 +53,26 @@ let playRound = (player, computer) => {
             return "The player's paper wraps the computer's rock and self-destructs!";
         } else if (computer === "scissors") {
             cpu++;
-            return "Computer's scissors cuts the player's paper into shreds!";
+            return "The computer's scissors cuts the player's paper into shreds!";
         }
     }
 };
 
 //? when a player or players reach 5 points, return results
 let result = () => {
-    if (human === 5) {
+    if (cpu === 5 || human === 5) {
         document.getElementById("rock").disabled = true;
         document.getElementById("paper").disabled = true;
         document.getElementById("scissors").disabled = true;
+        document.getElementById("reset").disabled = false;
+    }
+    if (human === 5) {
         return `Player wins the best of five!`;
     } else if (cpu === 5) {
-        document.getElementById("rock").disabled = true;
-        document.getElementById("paper").disabled = true;
-        document.getElementById("scissors").disabled = true;
         return `Computer wins the best of five!`;
+    }
+    if (human < 5 || cpu < 5) {
+        document.getElementById("reset").disabled = true;
     }
 };
 
@@ -108,7 +111,7 @@ announcer.classList.toggle("announcer");
 roundResult.classList.toggle("roundResult");
 finalResult.classList.toggle("endResult");
 points.classList.toggle("points");
-reset.classList.toggle("reset");
+reset.id ='reset';
 
 //? announcer box that shows round results and final results after five rounds
 body.appendChild(announcer);
@@ -140,4 +143,4 @@ scissors.addEventListener("click", function () {
     roundResult.textContent = playRound("scissors", getComputerChoice());
     scoreTracker();
 });
-reset.addEventListener("click", resetGame());
+reset.addEventListener("click", resetGame);
