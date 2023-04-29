@@ -67,12 +67,9 @@ let result = () => {
         document.getElementById("reset").disabled = false;
     }
     if (human === 5) {
-        return `Player wins the best of five!`;
+        return `Player wins`;
     } else if (cpu === 5) {
-        return `Computer wins the best of five!`;
-    }
-    if (human < 5 || cpu < 5) {
-        document.getElementById("reset").disabled = true;
+        return `Computer wins`;
     }
 };
 
@@ -87,6 +84,7 @@ let resetGame = () => {
     document.getElementById("rock").disabled = false;
     document.getElementById("paper").disabled = false;
     document.getElementById("scissors").disabled = false;
+    document.getElementById("reset").disabled = true;
 };
 
 //? function keeps track of score and provides final result
@@ -111,7 +109,7 @@ announcer.classList.toggle("announcer");
 roundResult.classList.toggle("roundResult");
 finalResult.classList.toggle("endResult");
 points.classList.toggle("points");
-reset.id ='reset';
+reset.id = "reset";
 
 //? announcer box that shows round results and final results after five rounds
 body.appendChild(announcer);
@@ -119,12 +117,6 @@ body.appendChild(reset);
 announcer.appendChild(roundResult);
 announcer.appendChild(points);
 announcer.appendChild(finalResult);
-
-//? default text values to prevent popping in
-reset.textContent = "Reset";
-points.textContent = "Player: 0 | Computer: 0";
-roundResult.textContent =
-    "Click on Rock, Paper, or Scissors to start the game!";
 
 /* EVENT LISTENERS
 ? set event listeners to click to a function that runs the game and results functions
@@ -144,3 +136,12 @@ scissors.addEventListener("click", function () {
     scoreTracker();
 });
 reset.addEventListener("click", resetGame);
+
+//? Settings that automatically load on page view
+window.onload = function () {
+    document.getElementById("reset").disabled = true;
+    reset.textContent = "Reset";
+    points.textContent = "Player: 0 | Computer: 0";
+    roundResult.textContent =
+        "Click on Rock, Paper, or Scissors to start the game!";
+};
