@@ -126,7 +126,10 @@ scissors.addEventListener("click", function () {
 reset.addEventListener("click", function () {
     human = 0;
     cpu = 0;
+    roundResult.textContent =
+    "Click on Rock, Paper, or Scissors to start the game!";
     points.textContent = `Player: ${human} | Computer: ${cpu}`;
+    finalResult.textContent = '';
     document.getElementById("rock").disabled = false;
     document.getElementById("paper").disabled = false;
     document.getElementById("scissors").disabled = false;
