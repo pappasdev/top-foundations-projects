@@ -19,8 +19,8 @@ var cpu = 0;
 
 /* 
 ? game logic w/ point tallying
-? player parameter === button click set to appropriate string input
-? computer parameter === getComputerChoice() 
+? player parameter is a button click set to appropriate string input
+? computer parameter is the function getComputerChoice() 
 */
 let playRound = (player, computer) => {
     if (player === "rock") {
