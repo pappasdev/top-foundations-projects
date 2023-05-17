@@ -6,12 +6,12 @@ function grid() {
     //? this can technically work as expected with any number, but I decided to cap it at 50 as a personal preference.
     let gChoice = prompt("Enter a number 1-50.", "16");
     if (gChoice > 50) {
-        alert("Value must be under 50. Default grid has been made.");
+        alert("Only accept numbers 1-50. Default grid has been made.");
         gChoice = 16;
     }
     /* 
-    ? add constraints so divs fill in evenly inside the container no matter the user input.
-    ? this was the hardest part to figure out because... math. i did not come up with this formula.
+    ? add constraints so divs fill in evenly inside the square container no matter the user input.
+    ? this was the hardest part to figure out because... math. i can't take credit for the 1:1 grid sizing formula.
     ? my own solution worked to a degree, but would go from square to rectangle as the input got bigger
     */
     const gridSize = Math.floor(containerSize / gChoice);
@@ -38,7 +38,7 @@ function grid() {
 const gridChoice = document.querySelector("#gridChoice");
 gridChoice.addEventListener("click", grid);
 
-//? reset erases all of the divs and re-enables creation of a new grid.
+//? reset removes all of the divs and re-enables creation of a new grid.
 const reset = document.querySelector("#reset");
 reset.addEventListener("click", () => {
     const squares = document.querySelectorAll(".square");
