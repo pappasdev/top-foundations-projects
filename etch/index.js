@@ -38,7 +38,7 @@ function grid() {
 const gridChoice = document.querySelector("#gridChoice");
 gridChoice.addEventListener("click", grid);
 
-//? wrote reset on my own after finally understanding selectorAll (a node list) and forEach.
+//? reset erases all of the divs and re-enables creation of a new grid.
 const reset = document.querySelector("#reset");
 reset.addEventListener("click", () => {
     const squares = document.querySelectorAll(".square");
