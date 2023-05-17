@@ -1,4 +1,4 @@
-let container = document.querySelector("#container");
+const container = document.querySelector("#container");
 const containerSize = Math.min(500, 500);
 
 //? this function generates a grid, as you can tell by the name.
@@ -21,7 +21,7 @@ function grid() {
     container.style.height = `${containerHeight}px`;
     //? standard loop to generate based on user input.
     for (let i = 0; i < gChoice * gChoice; i++) {
-        let square = document.createElement("div");
+        const square = document.createElement("div");
         square.classList.add("square");
         square.style.width = `${gridSize}px`;  //? based on earlier formula
         square.style.height = `${gridSize}px`; //? based on earlier formula
@@ -35,13 +35,13 @@ function grid() {
     reset.disabled = false;
 }
 
-let gridChoice = document.querySelector("#gridChoice");
+const gridChoice = document.querySelector("#gridChoice");
 gridChoice.addEventListener("click", grid);
 
 //? wrote reset on my own after finally understanding selectorAll (a node list) and forEach.
-let reset = document.querySelector("#reset");
+const reset = document.querySelector("#reset");
 reset.addEventListener("click", () => {
-    let squares = document.querySelectorAll(".square");
+    const squares = document.querySelectorAll(".square");
     squares.forEach((square) => {
         container.removeChild(square);
     });
