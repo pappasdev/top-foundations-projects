@@ -1,0 +1,45 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #A5907E;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+h1 {
+    font-size: 4em;
+}
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+    background-image: url("./img/doge.png");
+    border: 4px black solid;
+}
+.square {
+    background-color: #fff4b8;
+    border: 1px black solid;
+    box-sizing: border-box;
+}
+h1 {
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+#buttons {
+    display: flex;
+    gap: 10px;
+    width: 508px;
+}
+button {
+    border: 4px black solid;
+    font-size: 1.5em;
+    width: 250px;
+    margin-bottom: 10px;
+}
+footer {
+    margin-right: -310px;
+}
+a {
+    color: #fff4b8;
+}
