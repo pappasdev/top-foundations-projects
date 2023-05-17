@@ -28,14 +28,14 @@ h1 {
 }
 #buttons {
     display: flex;
+    justify-content: center;
     gap: 10px;
-    width: 508px;
 }
 button {
     border: 4px black solid;
     font-size: 1.5em;
-    width: 250px;
     margin-bottom: 10px;
+    width: 200px;
 }
 footer {
     margin-right: -310px;
