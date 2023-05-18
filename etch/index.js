@@ -4,10 +4,10 @@ const containerSize = Math.min(500, 500);
 //? this function generates a grid, as you can tell by the name.
 function grid() {
     //? this can technically work as expected with any number, but I decided to cap it at 50 as a personal preference.
-    let gChoice = prompt("Enter a number 1-50.", "16");
-    if (gChoice > 50) {
-        alert("Only accept numbers 1-50. Default grid has been made.");
-        gChoice = 16;
+    let gChoice = prompt("Enter a number 50-100.", "50");
+    if (gChoice > 100 || gChoice < 50) {
+        alert("Only accept numbers 50-100. Default grid has been made.");
+        gChoice = 50;
     }
     /* 
     ? add constraints so divs fill in evenly inside the square container no matter the user input.
