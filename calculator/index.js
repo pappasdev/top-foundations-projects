@@ -36,7 +36,7 @@ numbers.forEach((number) => {
     });
 });
 
-//? stores out first number selection and operator
+//? stores our first number selection and operator
 const operators = document.querySelectorAll(".operators");
 operators.forEach((operator) => {
     operator.addEventListener("click", () => {
