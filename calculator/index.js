@@ -23,7 +23,7 @@ var secondNum = 0;
 var displayValue = "";
 var operationChoice = null;
 
-//? numbers input to screen
+//? numbers input to screen. stores secondNum from display if firstNum has a number assigned already.
 let input = document.querySelector("#inputText");
 const numbers = document.querySelectorAll(".numbers");
 numbers.forEach((number) => {
@@ -45,6 +45,7 @@ operators.forEach((operator) => {
     });
 });
 
+//? choice on calculation based on string value assigned to oper
 const equals = document.querySelector("#equals");
 equals.addEventListener("click", () => {
     if (oper === "/") {
@@ -62,7 +63,7 @@ equals.addEventListener("click", () => {
     input.textContent = operationChoice;
 });
 
-//? AC button
+//? resets our global numbers
 let clear = document.querySelector("#clear");
 clear.addEventListener("click", () => {
     firstNum = 0;
