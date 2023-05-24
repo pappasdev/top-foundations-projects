@@ -1,3 +1,5 @@
+//TODO Concatenate multiple numbers
+
 //? calculator functions
 let add = (a, b) => {
     return a + b;
@@ -34,7 +36,7 @@ numbers.forEach((number) => {
     });
 });
 
-//? operators assign displayValue to firstNum and chooses what operation to run based on text content
+//? stores out first number selection and operator
 const operators = document.querySelectorAll(".operators");
 operators.forEach((operator) => {
     operator.addEventListener("click", () => {
