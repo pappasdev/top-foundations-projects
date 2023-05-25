@@ -28,8 +28,8 @@ let input = document.querySelector("#inputText");
 const numbers = document.querySelectorAll(".numbers");
 numbers.forEach((number) => {
     number.addEventListener("click", () => {
-        input.textContent = number.textContent;
-        displayValue = number.textContent;
+        displayValue += number.textContent;
+        input.textContent = displayValue;
         if (firstNum !== undefined && oper !== undefined) {
             secondNum = Number(displayValue);
         }
@@ -42,6 +42,7 @@ operators.forEach((operator) => {
     operator.addEventListener("click", () => {
         oper = operator.textContent;
         firstNum = Number(displayValue);
+        displayValue = '';
     });
 });
 
@@ -68,5 +69,6 @@ let clear = document.querySelector("#clear");
 clear.addEventListener("click", () => {
     firstNum = 0;
     secondNum = 0;
+    displayValue = '';
     input.textContent = "0";
 });
