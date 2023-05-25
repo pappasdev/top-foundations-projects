@@ -1,6 +1,3 @@
-//TODO Concatenate multiple numbers
-
-//? calculator functions
 let add = (a, b) => {
     return a + b;
 };
@@ -16,7 +13,7 @@ let divide = (a, b) => {
     return a / b;
 };
 
-//? calculations to be called in use cases for operators and equals
+//? calculations to be called; handles some edge cases
 let calculate = () => {
     if (oper === "/") {
         result = divide(firstNum, secondNum);
@@ -85,7 +82,7 @@ equals.addEventListener("click", () => {
     }
 });
 
-//? resets our calculator with our variables
+
 let clear = document.querySelector("#clear");
 clear.addEventListener("click", () => {
     firstNum = undefined;
