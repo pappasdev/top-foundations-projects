@@ -7,148 +7,226 @@
         <title>Document</title>
     </head>
     <body>
-        <div class="search-container">
-            <div class="search">
-                <img src="./img/magnify.svg" alt="search" height="30px" />
-            </div>
-            <div class="search">
-                <label for="search">
-                    <input
-                        type="search"
-                        name="search"
-                        id="search"
-                        placeholder="Search"
+        <main>
+            <div class="search-container">
+                <div class="search">
+                    <img src="./img/magnify.svg" alt="search" />
+                </div>
+                <div class="search">
+                    <label for="search">
+                        <input
+                            type="search"
+                            name="search"
+                            id="search"
+                            placeholder="Search"
+                        />
+                    </label>
+                </div>
+                <div class="search">
+                    <img src="./img/bell-outline.svg" alt="notifications" />
+                </div>
+                <div class="search">
+                    <img
+                        src="./img/emoticon-cool-outline.svg"
+                        alt="avatar"
+                        height="50px"
                     />
-                </label>
-            </div>
-            <div class="search">
-                <img
-                    src="./img/bell-outline.svg"
-                    alt="notifications"
-                    height="30px"
-                />
-            </div>
-            <div class="search">
-                <img
-                    src="./img/emoticon-cool-outline.svg"
-                    alt="avatar"
-                    height="50px"
-                />
-            </div>
-            <div class="search" style="text-align: center; font-weight: bold">
-                Gregory Pappas
-            </div>
-        </div>
-        <div class="toolbar-container">
-            <div class="toolbar">
-                <img
-                    src="./img/emoticon-cool-outline.svg"
-                    alt="avatar"
-                    height="70px"
-                />
-            </div>
-            <div class="toolbar">
-                <div class="small" style="font-size: small"> Hi there, </div>
-                <div class="user" style="font-weight: bold">
-                    Gregory Pappas (@pappas)
+                </div>
+                <div
+                    class="search"
+                    style="text-align: center; font-weight: bold"
+                >
+                    Gregory Pappas
                 </div>
             </div>
-            <div class="toolbar">
-                <button>New</button>
-            </div>
-            <div class="toolbar">
-                <button>Upload</button>
-            </div>
-            <div class="toolbar">
-                <button>Share</button>
-            </div>
-        </div>
-        <div class="sidebar-container">
-            <div id="sidebar-logo" class="sidebar">
-                <img src="./img/apps-box.svg" alt="icon" height="60px" />
-                <p style="font-weight: bold"> Dashboard </p>
-            </div>
-            <div class="sidebar">
-                <p class="menu">Home</p>
-                <p class="menu">Profile</p>
-                <p class="menu">Messages</p>
-                <p class="menu">History</p>
-                <p class="menu">Tasks</p>
-                <p class="menu">Communities</p>
-            </div>
-            <div class="sidebar">
-                <p class="menu">Settings</p>
-                <p class="menu">Support</p>
-                <p class="menu">Privacy</p>
-            </div>
-        </div>
-        <div class="project-container">
-            <div class="project">
-                <p class="title">Super Amazing Project</p>
-                <p class="excerpt">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sem fringilla ut morbi tincidunt augue. Sit amet massa vitae tortor condimentum. Vitae congue eu consequat ac. Ut tristique et egestas quis ipsum. Sed libero enim sed faucibus turpis in eu.
-                </p>
-                <div class="share">
-                    <img src="./img/star-plus-outline.svg" alt="favorite" height="30px">
-                    <img src="./img/eye-plus.svg" alt="save" height="30px">
-                    <img src="./img/share-variant-outline.svg" alt="share" height="30px">
+            <div class="toolbar-container">
+                <div class="toolbar">
+                    <img
+                        src="./img/emoticon-cool-outline.svg"
+                        alt="avatar"
+                        height="70px"
+                    />
+                </div>
+                <div class="toolbar">
+                    <div class="small" style="font-size: small">
+                        Hi there,
+                    </div>
+                    <div class="user" style="font-weight: bold">
+                        Gregory Pappas (@pappas)
+                    </div>
+                </div>
+                <div class="toolbar">
+                    <button>New</button>
+                </div>
+                <div class="toolbar">
+                    <button>Upload</button>
+                </div>
+                <div class="toolbar">
+                    <button>Share</button>
                 </div>
             </div>
-            <div class="project">
-                <p class="title">Super Cool Project</p>
-                <p class="excerpt">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sem fringilla ut morbi tincidunt augue. Sit amet massa vitae tortor condimentum. Vitae congue eu consequat ac. Ut tristique et egestas quis ipsum. Sed libero enim sed faucibus turpis in eu.
-                </p>
-                <div class="share">
-                    <img src="./img/star-plus-outline.svg" alt="favorite" height="30px">
-                    <img src="./img/eye-plus.svg" alt="save" height="30px">
-                    <img src="./img/share-variant-outline.svg" alt="share" height="30px">
+            <div class="sidebar-container">
+                <div id="sidebar-logo" class="sidebar">
+                    <img src="./img/apps-box.svg" alt="icon"/>
+                    <h2 style="font-weight: bold"> Dashboard </h2>
+                </div>
+                <div class="sidebar">
+                    <img src="./img/home-account.svg" alt="home" />
+                    <p class="menu">Home</p>
+                    <img src="./img/card-account-details.svg" alt="profile" />
+                    <p class="menu">Profile</p>
+                    <img src="./img/message-badge.svg" alt="message" />
+                    <p class="menu">Messages</p>
+                    <img src="./img/history.svg" alt="history" />
+                    <p class="menu">History</p>
+                    <img src="./img/calendar-check-outline.svg" alt="" />
+                    <p class="menu">Tasks</p>
+                    <img src="./img/account-group.svg" alt="" />
+                    <p class="menu">Communities</p>
+                </div>
+                <div class="sidebar">
+                    <img src="./img/cog-box.svg" alt="settings" />
+                    <p class="menu">Settings</p>
+                    <img src="./img/chat-question.svg" alt="support" />
+                    <p class="menu">Support</p>
+                    <img src="./img/shield-account.svg" alt="privacy" />
+                    <p class="menu">Privacy</p>
                 </div>
             </div>
-            <div class="project">
-                <p class="title">Less Cool Project</p>
-                <p class="excerpt">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sem fringilla ut morbi tincidunt augue. Sit amet massa vitae tortor condimentum. Vitae congue eu consequat ac. Ut tristique et egestas quis ipsum. Sed libero enim sed faucibus turpis in eu.
-                </p>
-                <div class="share">
-                    <img src="./img/star-plus-outline.svg" alt="favorite" height="30px">
-                    <img src="./img/eye-plus.svg" alt="save" height="30px">
-                    <img src="./img/share-variant-outline.svg" alt="share" height="30px">
+            <div class="project-container">
+                <div class="project">
+                    <p class="title">Super Amazing Project</p>
+                    <p class="excerpt">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua.
+                    </p>
+                    <div class="share">
+                        <img src="./img/star-plus-outline.svg" alt="favorite" />
+                        <img src="./img/eye-plus.svg" alt="save" />
+                        <img
+                            src="./img/share-variant-outline.svg"
+                            alt="share"
+                        />
+                    </div>
+                </div>
+                <div class="project">
+                    <p class="title">Super Cool Project</p>
+                    <p class="excerpt">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Sem fringilla ut morbi tincidunt augue.
+                    </p>
+                    <div class="share">
+                        <img src="./img/star-plus-outline.svg" alt="favorite" />
+                        <img src="./img/eye-plus.svg" alt="save" />
+                        <img
+                            src="./img/share-variant-outline.svg"
+                            alt="share"
+                        />
+                    </div>
+                </div>
+                <div class="project">
+                    <p class="title">Less Cool Project</p>
+                    <p class="excerpt">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Sem fringilla ut morbi tincidunt augue.
+                    </p>
+                    <div class="share">
+                        <img src="./img/star-plus-outline.svg" alt="favorite" />
+                        <img src="./img/eye-plus.svg" alt="save" />
+                        <img
+                            src="./img/share-variant-outline.svg"
+                            alt="share"
+                        />
+                    </div>
+                </div>
+                <div class="project">
+                    <p class="title">Impossible App</p>
+                    <p class="excerpt">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Sem fringilla ut morbi tincidunt augue.
+                    </p>
+                    <div class="share">
+                        <img src="./img/star-plus-outline.svg" alt="favorite" />
+                        <img src="./img/eye-plus.svg" alt="save" />
+                        <img
+                            src="./img/share-variant-outline.svg"
+                            alt="share"
+                        />
+                    </div>
+                </div>
+                <div class="project">
+                    <p class="title">Easy App</p>
+                    <p class="excerpt">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Sem fringilla ut morbi tincidunt augue.
+                    </p>
+                    <div class="share">
+                        <img src="./img/star-plus-outline.svg" alt="favorite" />
+                        <img src="./img/eye-plus.svg" alt="save" />
+                        <img
+                            src="./img/share-variant-outline.svg"
+                            alt="share"
+                        />
+                    </div>
+                </div>
+                <div class="project">
+                    <p class="title">Ad Blocker</p>
+                    <p class="excerpt">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Sem fringilla ut morbi tincidunt augue.
+                    </p>
+                    <div class="share">
+                        <img src="./img/star-plus-outline.svg" alt="favorite" />
+                        <img src="./img/eye-plus.svg" alt="save" />
+                        <img
+                            src="./img/share-variant-outline.svg"
+                            alt="share"
+                        />
+                    </div>
                 </div>
             </div>
-            <div class="project">
-                <p class="title">Impossible App</p>
-                <p class="excerpt">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sem fringilla ut morbi tincidunt augue. Sit amet massa vitae tortor condimentum. Vitae congue eu consequat ac. Ut tristique et egestas quis ipsum. Sed libero enim sed faucibus turpis in eu.
-                </p>
-                <div class="share">
-                    <img src="./img/star-plus-outline.svg" alt="favorite" height="30px">
-                    <img src="./img/eye-plus.svg" alt="save" height="30px">
-                    <img src="./img/share-variant-outline.svg" alt="share" height="30px">
+            <div class="announcement-container">
+                <div class="announcement">
+                    <p class="title">Site Maintenence</p>
+                    <p class="exerpt">
+                        orem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Sem fringilla ut morbi tincidunt augue.
+                    </p>
+                    <hr />
+                    <p class="title">Community Share Day</p>
+                    <p class="exerpt">
+                        orem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Sem fringilla ut morbi tincidunt augue.
+                    </p>
+                    <hr />
+
+                    <p class="title">Updated Privacy Policy</p>
+                    <p class="exerpt">
+                        orem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Sem fringilla ut morbi tincidunt augue.
+                    </p>
+                    <hr />
                 </div>
             </div>
-            <div class="project">
-                <p class="title">Easy App</p>
-                <p class="excerpt">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sem fringilla ut morbi tincidunt augue. Sit amet massa vitae tortor condimentum. Vitae congue eu consequat ac. Ut tristique et egestas quis ipsum. Sed libero enim sed faucibus turpis in eu.
-                </p>
-                <div class="share">
-                    <img src="./img/star-plus-outline.svg" alt="favorite" height="30px">
-                    <img src="./img/eye-plus.svg" alt="save" height="30px">
-                    <img src="./img/share-variant-outline.svg" alt="share" height="30px">
-                </div>
+            <div class="trending-container">
+                    <img src="./img/trending-up.svg" alt="trend" />
+                    <p><span style="font-weight: bold;">@jim</span><br>World Piece Builder</p>
+                    <img src="./img/trending-up.svg" alt="trend" />
+                    <p><span style="font-weight: bold;">@jessica</span><br>All Around Cool Person</p>
+                    <img src="./img/trending-up.svg" alt="trend" />
+                    <p><span style="font-weight: bold;">@steve</span><br>Annoying</p>
+                    <img src="./img/trending-up.svg" alt="trend" />
+                    <p><span style="font-weight: bold;">@torgal</span><br>A Very Cool Dog</p>
             </div>
-            <div class="project">
-                <p class="title">Ad Blocker</p>
-                <p class="excerpt">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sem fringilla ut morbi tincidunt augue. Sit amet massa vitae tortor condimentum. Vitae congue eu consequat ac. Ut tristique et egestas quis ipsum. Sed libero enim sed faucibus turpis in eu.
-                </p>
-                <div class="share">
-                    <img src="./img/star-plus-outline.svg" alt="favorite" height="30px">
-                    <img src="./img/eye-plus.svg" alt="save" height="30px">
-                    <img src="./img/share-variant-outline.svg" alt="share" height="30px">
-                </div>
-            </div>
-        </div>
+        </main>
     </body>
 </html>
