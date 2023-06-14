@@ -96,7 +96,7 @@ input[type="search"] {
     padding-left: 30px;
     padding-right: 30px;
     gap:20px;
-    box-shadow: 0px 10px 15px #aeaeae;
+    box-shadow: 0px 4px 4px #aeaeae;
     grid-area: toolbar;
 }
 button {
