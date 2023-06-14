@@ -36,7 +36,7 @@ body {
     text-rendering: optimizeSpeed;
     line-height: 1.5;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #bebebe;
+    background-color: #bfbdbd;
 }
 
 /* Remove list styles on ul, ol elements */
@@ -73,40 +73,59 @@ main {
     display: grid;
     grid-template-columns: 0.25fr 5fr 0.25fr 0.25fr 1fr;
     align-items: center;
+    padding-top:20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 0px;
+    gap:20px;
     grid-area: search;
 }
-.search {
-    border: 1px solid red;
-}
 input[type="search"] {
-    border-radius: 0.5em;
+    border-radius: 1em;
     border-style: none;
-    width: 90%;
+    width: 98%;
     padding: 5px;
+    background-color: #cbcbcb;
 }
 /*? toolbar */
 .toolbar-container {
     display: grid;
     grid-template-columns: 0.25fr 2fr 0.25fr 0.25fr 0.25fr;
     align-items: center;
+    padding:20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    gap:20px;
+    box-shadow: 0px 10px 15px #aeaeae;
     grid-area: toolbar;
 }
-.toolbar {
-    border: 1px solid red;
+button {
+    border: none;
+    width:100px;
+    height:40px;
+    border-radius:1em;
+    background-color: #0a88dc;
+    color:#f0f0f0;
+    font-weight: bold;
+    font-size: 1.1rem;
 }
 /*? sidebar*/
 .sidebar-container {
     display: grid;
     grid-template-rows: 0.05fr 0.25fr 0.13fr;
     grid-area: sidebar;
-    background-color: rgb(44, 118, 167);
+    background-color: #0a88dc;
     gap: 40px;
     padding: 20px;
-    color: #e4e4e4;
+    color: #ececec;
+    border-radius: 0.5em;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
 }
 .sidebar {
     display: grid;
     grid-template-columns: 0.3fr 1fr;
+    align-items: center;
 }
 #sidebar-logo {
     display: grid;
@@ -176,9 +195,10 @@ input[type="search"] {
 /*? trending */
 .trending-container {
     display: grid;
-    grid-template-columns: 0.25fr 1fr;
+    grid-template-columns: 0.15fr 0.55fr;
     grid-template-rows: repeat(4, 80px);
     align-items:center;
+    justify-content: center;
     padding: 20px;
     margin-right: 30px;
     grid-area: trending;
@@ -191,7 +211,7 @@ input[type="search"] {
   height: 30px;
 }
 .search-container, .toolbar-container{
-  background-color: rgb(204, 204, 204);
+  background-color: #f0f0f0;
 }
 .announcement, .trending-container, .project {
       box-shadow: -8px 0px 0px rgb(153, 98, 148);
