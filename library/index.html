@@ -11,18 +11,27 @@
     <form>
         <label for="author">
             author:
-            <input type="text" name="author" id="author">
+            <input type="text" name="author" id="author" placeholder="Haruki Murakami" required>
+            <p class="required">* required</p>
         </label>
         <label for="title">
             title:
-            <input type="text" name="title" id="title">
+            <input type="text" name="title" id="title" placeholder="Hear The Wind Sing" required>
+            <p class="required">* required</p>
         </label>
         <label for="read">
-            has book been read?
-            <input type="text" name="read" id="read">
+            read:
+            <input type="text" name="read" id="read" placeholder="yes/no" pattern="yes|no" required>
+            <p class="required">* required yes or no answer</p>
         </label>
         <button id="bookSubmit">New Book</button>
     </form>
-    <p id="bookDetails"></p>
+    <div id="titles">
+        <h2>Author</h2>
+        <h2>Title</h2>
+        <h2>Status</h2>
+    </div>
+    <div id="bookDetails">
+    </div>
 </body>
 </html>

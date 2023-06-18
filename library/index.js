@@ -1,6 +1,8 @@
 let myLibrary = [];
 const button = document.getElementById('bookSubmit');
 const bookDetails = document.getElementById('bookDetails');
+const gridTitles = document.getElementById('titles');
+const book = document.getElementById('book');
 
 function Book(author, title, read) {
     this.author = author;
@@ -20,11 +22,14 @@ function addBookToLibrary(event) {
 }
 
 function displayBook() {
-    let entry = '';
+    let entry = ''
     for (let i = 0; i < myLibrary.length; i++) {
-         entry += `author: ${myLibrary[i].author} title: ${myLibrary[i].title} has read: ${myLibrary[i].read}`; 
+        if (myLibrary[i].read === 'yes') {
+            entry += `<p>${myLibrary[i].author}</p><p>${myLibrary[i].title}</p><p>Has been read</p>`;
+        } else if (myLibrary[i].read === 'no') {
+            entry += `<p>${myLibrary[i].author}</p><p>${myLibrary[i].title}</p><p>Has not been read</p>`;
+        }
     }
-    bookDetails.textContent = entry;
+    bookDetails.innerHTML = entry;
 }
-
 button.addEventListener('click', addBookToLibrary)
