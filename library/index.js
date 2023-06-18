@@ -19,8 +19,11 @@ function addBookToLibrary(event) {
 
 function displayBook() {
     bookEntries.innerHTML = "";
-    for (let i = 0; i < myLibrary.length; i++) {
+    for (let i = myLibrary.length - 1; i >= 0; i--) {
+        const deleteButton = document.createElement("button");
         const bookButton = document.createElement("button");
+        deleteButton.classList.toggle('deleted')
+        deleteButton.textContent = 'Delete';
         bookButton.textContent = myLibrary[i].read ? "Unread" : "Read";
         bookButton.classList.toggle("notRead");
 
@@ -37,14 +40,17 @@ function displayBook() {
                 bookButton.textContent = "Unread";
             }
         });
-        const gridTitles = document.createElement('div')
-        gridTitles.classList.toggle('titles');
+
+        deleteButton.addEventListener('click', function () {
+            myLibrary.splice(i, 1);
+            bookEntries.removeChild(bookDiv)
+        })
+
         const bookDiv = document.createElement('div');
         bookDiv.classList.toggle('bookEntry')
-        gridTitles.innerHTML += `<h2>Author</h2><h2>Title</h2><h2>Status</h2>`;
         bookDiv.innerHTML += `<p>${myLibrary[i].author}</p><p>${myLibrary[i].title}</p>`;
         bookDiv.appendChild(bookButton);
-        bookEntries.appendChild(gridTitles);
+        bookDiv.appendChild(deleteButton);
         bookEntries.appendChild(bookDiv);
     }
 }

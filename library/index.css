@@ -98,12 +98,16 @@ button {
     border: none;
     border-radius: 0.3em;
 }
-#bookEntries {
-
+#bookSubmit {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 10px;
+  width: 150px;
 }
 .bookEntry {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
   background-color: #ee9f9f;
   box-shadow: 3px 3px 0px #b77878;
   border-radius: 0.3em;
@@ -115,18 +119,13 @@ button {
   justify-items: center;
   align-items: center;
 }
-.titles {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-items: center;
-    width: 700px;
-}
+
 p {
-    text-decoration: underline;
-    font-weight: bold;
-    font-size: 1.2rem;
-    padding-bottom: 20px;
-    padding-top: 10px;
+  background-color: #483d3d;
+  color: #e9b5b5;
+  font-weight: bold;
+  border-radius: 0.3em;
+  padding: 8px;
 }
 .required {
     font-size: 0.6rem;
@@ -145,6 +144,12 @@ p {
 .isRead {
   background-color: #483d3d;
   color: #bbfe5d;
+  font-weight: bold;
+  height: 35px;
+}
+.deleted {
+  background-color: #483d3d;
+  color: #5ddefe;
   font-weight: bold;
   height: 35px;
 }
