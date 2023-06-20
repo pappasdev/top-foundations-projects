@@ -36,7 +36,7 @@ function checkWin() {
     ];
     for (let line of lines) {
         const [a, b, c] = line;
-        if(gameBoard.indexEntries[a] && gameBoard.indexEntries[a] === gameBoard.indexEntries[b] && gameBoard.indexEntries[c]) {
+        if(gameBoard.indexEntries[a] && gameBoard.indexEntries[a] === gameBoard.indexEntries[b] && gameBoard.indexEntries[a] === gameBoard.indexEntries[c]) {
             return gameBoard.indexEntries[a];
         }
     }
