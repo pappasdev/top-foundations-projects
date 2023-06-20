@@ -1,0 +1,65 @@
+/* Simple CSS Reset */
+
+/* Box-sizing reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Margin and padding reset */
+html,
+body,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Font-family and font-size reset */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* List-style-type reset */
+ul,
+ol {
+    list-style-type: none;
+}
+h1 {
+    font-size:xxx-large;
+}
+#board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    height: 700px;
+    width: 700px;
+}
+#choices {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 700px;
+    height: 100px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.choice, .entry {
+    font-size: 5rem;
+}
+.entry {
+    cursor: pointer;
+}
