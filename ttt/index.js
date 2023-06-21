@@ -51,6 +51,7 @@ reset.addEventListener("click", () => {
     entries.forEach((entry) => {
         entry.textContent = "";
         entry.disabled = false;
+        title.textContent = 'tic tac toe';
     });
     gameBoard.indexEntries = ["", "", "", "", "", "", "", "", ""];
     reset.disabled = true;

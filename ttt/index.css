@@ -32,15 +32,13 @@ body {
     align-items: center;
     font-size: 16px;
     line-height: 1.5;
+    background-color: lightgray;
 }
 
 /* List-style-type reset */
 ul,
 ol {
     list-style-type: none;
-}
-h1 {
-    font-size:xxx-large;
 }
 button {
     margin: 0px;
@@ -50,19 +48,26 @@ button {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    height: 700px;
+    height: 600px;
     width: 700px;
 }
 .reset {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 0.33fr 0.66fr;
+    justify-content: center;
+    align-items: center;
     width: 700px;
     height: 100px;
     margin-top: 10px;
     margin-bottom: 20px;
 }
-.choice {
+#reset, h1 {
     font-size: 5rem;
+}
+.title {
+    border: 1.5px solid lightskyblue;
+    border-radius: 0.2em;
+    background-color: lightblue;
 }
 .entry {
     cursor: pointer;
