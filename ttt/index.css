@@ -42,6 +42,10 @@ ol {
 h1 {
     font-size:xxx-large;
 }
+button {
+    margin: 0px;
+    padding: 0px;
+}
 #board {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -49,17 +53,18 @@ h1 {
     height: 700px;
     width: 700px;
 }
-#choices {
+.reset {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
     width: 700px;
     height: 100px;
     margin-top: 10px;
     margin-bottom: 20px;
 }
-.choice, .entry {
+.choice {
     font-size: 5rem;
 }
 .entry {
     cursor: pointer;
+    font-size: 10rem;
 }
