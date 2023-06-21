@@ -77,5 +77,6 @@ entries.forEach((entry, index) => {
                 disableOnWin();
             }
         }
+        entry.disabled = true;
     });
 });
