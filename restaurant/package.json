@@ -21,6 +21,10 @@
   },
   "homepage": "https://github.com/pappasdev/top-foundations-projects#readme",
   "devDependencies": {
+    "css-loader": "^6.8.1",
+    "file-loader": "^6.2.0",
+    "style-loader": "^3.3.3",
+    "url-loader": "^4.1.1",
     "webpack": "^5.88.0",
     "webpack-cli": "^5.1.4"
   }
